@@ -27,15 +27,17 @@
         transform: scale(1.02);
         transition: transform 0.2s;
       }
+
+      /* Gradient background voor header */
+      header.py-5 {
+        background: linear-gradient(90deg, #4a90e2, #9013fe);
+        color: white;
+      }
     </style>
   </head>
   <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
-      <!-- Je content komt hier -->
-    </main>
-  </body>
-</html>
-        <!-- Navbar -->
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
           <a class="navbar-brand fw-bold text-primary" href="#">Sacha Scholten</a>
@@ -51,7 +53,6 @@
           </div>
         </div>
       </nav>
-    </main>
 
       <!-- Header -->
       <header class="py-5">
@@ -82,7 +83,7 @@
               <a href="Verloren Moeder.html">Project: Verloren Moeder</a>
               <a href="vr-ghost-game.html">Project: VR AR Ghost Dusters</a>
               <a href="GetCooked.html">Project: GetCooked</a>
-              <a href="Simon says.html">Project: Mini Games</a>
+              <a href="mini-games.html">Project: Mini Games</a>
             </nav>
           </aside>
 
@@ -90,11 +91,11 @@
           <div class="col-md-9 col-lg-10 px-4">
             <!-- Mini Games Section -->
             <section id="mini-games" class="mb-5">
-              <h3 class="fw-bold mb-4">Speel een Mini Game!</h3>
+              <h3 class="fw-bold mb-4"></h3>
               <div class="d-flex flex-wrap gap-3 mb-3">
                 <button class="btn btn-primary" onclick="loadGame('Simon says/index.html')">Game 1: Simon Says</button>
-                <button class="btn btn-success" onclick="loadGame('tic tac toe/index.html')">Game 2: tic tac toe</button>
-                <button class="btn btn-warning" onclick="loadGame('Number guessing/index.html')">Game 3: Number guessing</button>
+                <button class="btn btn-success" onclick="loadGame('tic tac toe/index.html')">Game 2: Tic Tac Toe</button>
+                <button class="btn btn-warning" onclick="loadGame('Number guessing/index.html')">Game 3: Number Guessing</button>
               </div>
               <div id="gameContainer" style="display: none;">
                 <iframe id="gameFrame" width="100%" height="800" style="border: none; border-radius: 10px;" allowfullscreen></iframe>
