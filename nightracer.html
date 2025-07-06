@@ -28,15 +28,44 @@
         transition: transform 0.2s;
       }
 
-      .header-gradient {
-        background-image: linear-gradient(45deg, #d7e9f7 0%, #e8d8f9 100%);
-        color: #4a4a4a;
-        border-radius: 0.5rem;
+      /* Pastel gradient for header background */
+      header.py-5 {
+        background: linear-gradient(135deg, #2e6cb3 0%, #923855 100%);
+        color: #1f1e1e;
       }
 
+      /* Pastel gradient for badge */
       .badge.bg-gradient-primary-to-secondary {
-        background-image: linear-gradient(45deg, #d7e9f7 0%, #e8d8f9 100%) !important;
-        color: #4a4a4a !important;
+        background: linear-gradient(135deg, #918f89 0%, #fda085 100%);
+        color: #4a3c31;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      /* Optional: pastel gradient text for About Me heading */
+      .text-gradient {
+        background: linear-gradient(135deg, #51cf08 0%, #252425 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Optional: pastel colored icons in About Me section */
+      .text-gradient > i {
+        color: #fda085;
+        transition: color 0.3s ease;
+      }
+      .text-gradient > i:hover {
+        color: #a8edea;
+      }
+
+      /* Margin boven projecten om ruimte onder header te creëren */
+      .projects-container {
+        margin-top: 3rem;
+      }
+
+      /* Toggle knop stijl */
+      .toggle-btn {
+        margin-bottom: 1rem;
       }
     </style>
   </head>
@@ -54,25 +83,24 @@
               <li class="nav-item mx-3"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item mx-3"><a class="nav-link" href="About me.html">About Me</a></li>
               <li class="nav-item mx-3"><a class="nav-link" href="projects.html">Projects</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="https://github.com/jouwgebruikersnaam" target="_blank">GitHub</a></li>
             </ul>
           </div>
         </div>
       </nav>
 
       <!-- Header -->
-      <header class="py-5 header-gradient">
+      <header class="py-5">
         <div class="container px-5 pb-5">
           <div class="row gx-5 align-items-center">
             <div class="col-xxl-6">
               <div class="text-center text-xxl-start">
-                <div class="badge bg-gradient-primary-to-secondary mb-4" style="color:#4a4a4a;">
+                <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
                   <div class="text-uppercase">Design · Development · Creativity</div>
                 </div>
-                <h1 class="fw-bolder mb-3">Welcome to Nightracer</h1>
-                <p class="lead fw-normal mb-4">Here you’ll find my C# code, photos, and creative work.</p>
-                <a class="btn btn-dark btn-sm" href="https://github.com/jouwgebruikersnaam" target="_blank">
-                <i class="bi bi-github me-1"></i> GitHub
+                <h1 class="fw-bolder mb-3">Welcome bij Nightracer</h1>
+                <p class="lead fw-normal text-muted mb-4">Here you’ll find my C# code, photos, and creative work.</p>
+                <a class="btn btn-dark btn-sm" href="https://gitlab.glu.nl/530806/night-racer" target="_blank">
+                  <i class="bi bi-github me-1"></i> GitHub
                 </a>
               </div>
             </div>
@@ -81,14 +109,14 @@
       </header>
 
       <!-- Main Layout -->
-      <section class="container-fluid">
+      <section class="container-fluid projects-container">
         <div class="row">
           <!-- Sidebar -->
           <aside class="col-md-3 col-lg-2 sidebar bg-light p-4 shadow-sm">
             <h5 class="text-center fw-bold">My Projects</h5>
             <nav class="d-flex flex-column">
               <a href="nightracer.html">Project: Nightracer</a>
-              <a href="lunar-legacy.html">Project: lunar-legacy </a>
+              <a href="Kampvuur.html">Project: Kampvuur</a>
               <a href="Verloren Moeder.html">Project: Verloren Moeder</a>
               <a href="vr-ghost-game.html">Project: VR AR Ghost Dusters</a>
               <a href="GetCooked.html">Project: GetCooked</a>
@@ -98,50 +126,164 @@
 
           <!-- Main Content -->
           <div class="col-md-9 col-lg-10 px-4">
-            <!-- Project 1 -->
-            <section id="project1" class="mb-5">
-              <div class="row align-items-center">
-                <div class="col-md-6 text-center">
-                  <img src="assets/photo1.jpg" class="img-fluid rounded shadow" alt="Project 1" />
-                </div>
-                <div class="col-md-6 mt-3 mt-md-0">
-                  <h3 class="fw-bold">Project 1: Hello Console</h3>
-                  <pre><code class="language-csharp">
-using System;
-
-class Program
+         <!-- Project 1 -->
+<section id="project1" class="mb-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="assets/1.gif" class="img-fluid rounded shadow" alt="Project 1" />
+    </div>
+    <div class="col-md-6 mt-3 mt-md-0">
+      <h3 class="fw-bold">De Auto</h3>
+      <p class="text-muted small">Dit is de auto in de game die rijd die ook samen werkt met de wheel WheelCollider. </p>
+      <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code1', this)">Toon Code</button>
+      <pre id="code1" class="d-none"><code class="language-csharp">
+public class CarSelection : MonoBehaviour
 {
-    static void Main()
+    public GameObject[] cars;
+
+    public Button next;
+
+    public Button prev;
+
+    int index;
+
+    public void Race()
     {
-        Console.WriteLine("Hello, world!");
+        SceneManager.LoadSceneAsync("Main");
+    }
+
+    void Start()
+    {
+        index = PlayerPrefs.GetInt("carsIndex");
+
+        for(int i = 0; i < cars.Length; i++)
+        {
+            cars[i].SetActive(false);
+            cars[index].SetActive(true);
+        }
+
+        if (index < cars.Length)
+        {
+            cars[index].SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Index out of bounds: " + index);
+        }
+    }
+
+    void Update()
+    {
+        if(index >= 2)
+        {
+            next.interactable = false;
+        }
+        else
+        {
+            next.interactable = true;
+        }
+
+        if (index <= 1)
+        {
+            prev.interactable = false;
+        }
+        else
+        {
+            prev.interactable = true;
+        }
+    }
+
+    public void Next()
+    {
+        index++;
+
+        if (index >= cars.Length)
+        {
+            index = 0;
+        }
+
+        SetActiveCar();
+        PlayerPrefs.SetInt("carsIndex", index);
+        PlayerPrefs.Save();
+    }
+
+    public void Prev()
+    {
+        index--;
+
+        if (index < 0)
+        {
+            index = cars.Length - 1;
+        }
+
+        SetActiveCar();
+        PlayerPrefs.SetInt("carsIndex", index);
+        PlayerPrefs.Save();
+    }
+
+    private void SetActiveCar()
+    {
+        for (int i = 0; i < cars.Length; i++)
+        {
+            cars[i].SetActive(i == index);
+        }
     }
 }
-                  </code></pre>
-                  <a class="btn btn-outline-dark mt-3" href="https://github.com/jouwgebruikersnaam/hello-console" target="_blank">
-                    <i class="bi bi-github"></i> View on GitHub
-                  </a>
-                </div>
-              </div>
-            </section>
+      </code></pre>
+    </div>
+  </div>
+</section>
+
 
             <!-- Project 2 -->
             <section id="project2" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center order-md-2">
-                  <img src="assets/photo2.jpg" class="img-fluid rounded shadow" alt="Project 2" />
+                  <img src="assets/2.gif" class="img-fluid rounded shadow" alt="Project 2" />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-                  <h3 class="fw-bold">Project 2: Calculator</h3>
-                  <pre><code class="language-csharp">
-using System;
-
-class Calculator
+                  <h3 class="fw-bold">De wielen van de auto</h3>
+                  <p class="text-muted small">Dit zijn de wheel die op de wielen zitten zo dat je ook een mooi effect krijgt van ook echt rollende wielen.</p>
+                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code2', this)">Toon Code</button>
+                  <pre id="code2" class="d-none"><code class="language-csharp">
+public class Wheel : MonoBehaviour
 {
-    static int Add(int a, int b) => a + b;
+    public bool IsPowered;
+    public bool CanTurn;
 
-    static void Main()
+    public GameObject Visualls;
+
+    private WheelCollider wheelCollider;
+
+    public void Start()
     {
-        Console.WriteLine(Add(3, 5));
+        wheelCollider = GetComponent<WheelCollider>();
+    }
+    private void Update()
+    {
+        Vector3 Position;
+        Quaternion Rotation;
+        wheelCollider.GetWorldPose(out Position, out Rotation);
+        Visualls.transform.position = Position;
+        Visualls.transform.rotation = Rotation;
+    }
+    public void Accelerate(float power)
+    {
+        if (IsPowered)
+        {
+            wheelCollider.motorTorque = power;
+        }
+    }
+    public void Turn(float Angle)
+    {
+        if(CanTurn)
+        {
+            wheelCollider.steerAngle = Angle;
+        }
+    }
+    public void Brake(float power)
+    {
+        wheelCollider.brakeTorque = power;
     }
 }
                   </code></pre>
@@ -153,59 +295,126 @@ class Calculator
             <section id="project3" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                  <img src="assets/photo3.jpg" class="img-fluid rounded shadow" alt="Project 3" />
+                  <img src="assets/3.gif" class="img-fluid rounded shadow" alt="Project 3" />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0">
-                  <h3 class="fw-bold">Project 3: Web Scraper</h3>
-                  <pre><code class="language-csharp">
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-class Scraper
+                  <h3 class="fw-bold">Het selecteren van de auto</h3>
+                  <p class="text-muted small">Dit is de selectie van de auto's die je uit de game kon kiezen.</p>
+                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code3', this)">Toon Code</button>
+                  <pre id="code3" class="d-none"><code class="language-csharp">
+public class CarSelection : MonoBehaviour
 {
-    static async Task Main()
+    public GameObject[] cars;
+
+    public Button next;
+
+    public Button prev;
+
+    int index;
+    public void Race()
     {
-        var client = new HttpClient();
-        var html = await client.GetStringAsync("https://example.com");
-        Console.WriteLine(html);
+        SceneManager.LoadSceneAsync("Main");
     }
-}
-                  </code></pre>
-                </div>
-              </div>
-            </section>
 
-            <!-- Project 4 -->
-            <section id="project4" class="mb-5">
-              <div class="row align-items-center">
-                <div class="col-md-6 text-center order-md-2">
-                  <img src="assets/photo4.jpg" class="img-fluid rounded shadow" alt="Project 4" />
-                </div>
-                <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-                  <h3 class="fw-bold">Project 4: Photo Viewer</h3>
-                  <pre><code class="language-csharp">
-using System;
-using System.IO;
-
-class PhotoViewer
-{
-    static void Main()
+    void Start()
     {
-        string[] files = Directory.GetFiles("C:/Photos");
-        foreach (var file in files)
+        index = PlayerPrefs.GetInt("carsIndex");
+
+        for(int i = 0; i < cars.Length; i++)
         {
-            Console.WriteLine(file);
+            cars[i].SetActive(false);
+            cars[index].SetActive(true);
+        }
+
+        if (index < cars.Length)
+        {
+            // Access the array element
+            cars[index].SetActive(true);
+        }
+        else
+        {
+            // Handle the case where the index is out of bounds
+            Debug.LogError("Index out of bounds: " + index);
+        }
+        
+
+    }
+
+    void Update()
+    {
+        if(index >= 2)
+        {
+            next.interactable = false;
+        }
+        else
+        {
+            next.interactable = true;
+        }
+
+        if (index <= 1)
+        {
+            prev.interactable = false;
+        }
+        else
+        {
+            prev.interactable = true;
+        }
+    }
+
+    public void Next()
+    {
+        // Increment the index
+        index++;
+
+        // Check if the index is within the bounds of the array
+        if (index >= cars.Length)
+        {
+            // If index exceeds the array length, wrap around to the beginning
+            index = 0;
+        }
+
+        // Activate the car corresponding to the updated index
+        SetActiveCar();
+
+        // Save the updated index
+        PlayerPrefs.SetInt("carsIndex", index);
+        PlayerPrefs.Save();
+    }
+     
+    public void Prev()
+    {
+        // Decrement the index
+        index--;
+
+        // Check if the index is within the bounds of the array
+        if (index < 0)
+        {
+            // If index becomes negative, wrap around to the end of the array
+            index = cars.Length - 1;
+        }
+
+        // Activate the car corresponding to the updated index
+        SetActiveCar();
+
+        // Save the updated index
+        PlayerPrefs.SetInt("carsIndex", index);
+        PlayerPrefs.Save();
+    }
+
+    // Helper method to activate the car corresponding to the current index
+    private void SetActiveCar()
+    {
+        for (int i = 0; i < cars.Length; i++)
+        {
+            cars[i].SetActive(i == index);
         }
     }
 }
+
                   </code></pre>
                 </div>
               </div>
             </section>
-          </div>
-        </div>
-      </section>
 
       <!-- About Me -->
       <section class="bg-white py-5">
@@ -219,7 +428,7 @@ class PhotoViewer
                 <div class="d-flex justify-content-center fs-2 gap-4">
                   <a class="text-gradient" href="#"><i class="bi bi-twitter"></i></a>
                   <a class="text-gradient" href="#"><i class="bi bi-linkedin"></i></a>
-                  <a class="text-gradient" href="https://github.com/jouwgebruikersnaam" target="_blank"><i class="bi bi-github"></i></a>
+                  <a class="text-gradient" href="#"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
@@ -248,5 +457,17 @@ class PhotoViewer
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script>
+      function toggleCode(codeId, btn) {
+        const codeBlock = document.getElementById(codeId);
+        if (codeBlock.classList.contains('d-none')) {
+          codeBlock.classList.remove('d-none');
+          btn.textContent = 'Verberg Code';
+        } else {
+          codeBlock.classList.add('d-none');
+          btn.textContent = 'Toon Code';
+        }
+      }
+    </script>
   </body>
 </html>

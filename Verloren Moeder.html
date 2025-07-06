@@ -28,201 +28,175 @@
         transition: transform 0.2s;
       }
 
-      /* Pastel gradient for header background */
       header.py-5 {
-        background: linear-gradient(135deg, #a8e6cf, #fff9b0);
-        color: #2f4f4f;
+        background: linear-gradient(135deg, #09ff00 0%, #ff0051 100%);
+        color: #ffffff;
       }
 
-      /* Pastel gradient badge */
-      .badge {
-        background: linear-gradient(135deg, #fff9b0, #a8e6cf);
-        color: #3a3a3a;
+      .badge.bg-gradient-primary-to-secondary {
+        background: linear-gradient(135deg, #ff0051 0%, #09ff00 100%);
+        color: #ffffff;
         font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .text-gradient > i {
+        color: #fda085;
+        transition: color 0.3s ease;
+      }
+      .text-gradient > i:hover {
+        color: #a8edea;
+      }
+
+      .projects-container {
+        margin-top: 3rem;
       }
     </style>
   </head>
+
   <body class="d-flex flex-column h-100">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-      <div class="container px-5">
-        <a class="navbar-brand fw-bold text-primary" href="#">Sacha Scholten</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto fw-semibold small">
-            <li class="nav-item mx-3"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item mx-3"><a class="nav-link" href="About me.html">About Me</a></li>
-            <li class="nav-item mx-3"><a class="nav-link" href="projects.html">Projects</a></li>
-          </ul>
+    <main class="flex-shrink-0">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+          <a class="navbar-brand fw-bold text-primary" href="#">Sacha Scholten</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold small">
+              <li class="nav-item mx-3"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="About me.html">About Me</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <!-- Header -->
-    <header class="py-5">
-      <div class="container px-5 pb-5">
-        <div class="row gx-5 align-items-center">
-          <div class="col-xxl-6">
-            <div class="text-center text-xxl-start">
-              <div class="badge text-uppercase mb-4">
-                Design · Development · Creativity
-              </div>
-              <h1 class="fw-bolder mb-3">Welcome to Verloren Moeder</h1>
-              <p class="lead fw-normal text-muted mb-4">Here you’ll find my C# code, photos, and creative work.</p>
-              <a class="btn btn-dark btn-sm" href="https://github.com/jouwgebruikersnaam" target="_blank">
-                <i class="bi bi-github me-1"></i> GitHub
+      <!-- Header -->
+      <header class="py-5">
+        <div class="container px-5 pb-5">
+          <div class="row gx-5 align-items-center">
+            <div class="col-xxl-6">
+              <div class="text-center text-xxl-start">
+                <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+                  <div class="text-uppercase">Design · Development · Creativity</div>
+                </div>
+                <h1 class="fw-bolder mb-3">Welcome bij Verloren Moeder</h1>
+                <p class="lead fw-normal text-muted mb-4">Here you’ll find my C# code, photos, and creative work.</p>
+                <a class="btn btn-dark btn-sm" href="https://github.com/GLU-Gaming/VerlorenMoeder/" target="_blank">
+                  <i class="bi bi-github me-1"></i> GitHub
                 </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main Layout -->
-    <section class="container-fluid">
-      <div class="row">
-        <!-- Sidebar -->
-        <aside class="col-md-3 col-lg-2 sidebar bg-light p-4 shadow-sm">
-          <h5 class="text-center fw-bold">My Projects</h5>
-          <nav class="d-flex flex-column">
-            <a href="nightracer.html">Project: Nightracer</a>
-            <a href="lunar-legacy.html">Project: lunar legacy </a>
-            <a href="Verloren Moeder.html">Project: Verloren Moeder</a>
-            <a href="vr-ghost-game.html">Project: VR AR Ghost Dusters</a>
-            <a href="GetCooked.html">Project: GetCooked</a>      
-            <a href="mini-games.html">Project: Mini Games</a>     
-          </nav>
-        </aside>
-
-        <!-- Main Content -->
-        <div class="col-md-9 col-lg-10 px-4">
-          <!-- Project 1 -->
-          <section id="project1" class="mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center">
-                <img src="assets/photo1.jpg" class="img-fluid rounded shadow" alt="Project 1" />
-              </div>
-              <div class="col-md-6 mt-3 mt-md-0">
-                <h3 class="fw-bold">Project 1: Hello Console</h3>
-                <pre><code class="language-csharp">
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Hello, world!");
-    }
-}
-                </code></pre>
-              </div>
-            </div>
-          </section>
-
-          <!-- Project 2 -->
-          <section id="project2" class="mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center order-md-2">
-                <img src="assets/photo2.jpg" class="img-fluid rounded shadow" alt="Project 2" />
-              </div>
-              <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-                <h3 class="fw-bold">Project 2: Calculator</h3>
-                <pre><code class="language-csharp">
-using System;
-
-class Calculator
-{
-    static int Add(int a, int b) => a + b;
-
-    static void Main()
-    {
-        Console.WriteLine(Add(3, 5));
-    }
-}
-                </code></pre>
-              </div>
-            </div>
-          </section>
-
-          <!-- Project 3 -->
-          <section id="project3" class="mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center">
-                <img src="assets/photo3.jpg" class="img-fluid rounded shadow" alt="Project 3" />
-              </div>
-              <div class="col-md-6 mt-3 mt-md-0">
-                <h3 class="fw-bold">Project 3: Web Scraper</h3>
-                <pre><code class="language-csharp">
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-class Scraper
-{
-    static async Task Main()
-    {
-        var client = new HttpClient();
-        var html = await client.GetStringAsync("https://example.com");
-        Console.WriteLine(html);
-    }
-}
-                </code></pre>
-              </div>
-            </div>
-          </section>
-
-          <!-- Project 4 -->
-          <section id="project4" class="mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center order-md-2">
-                <img src="assets/photo4.jpg" class="img-fluid rounded shadow" alt="Project 4" />
-              </div>
-              <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-                <h3 class="fw-bold">Project 4: Photo Viewer</h3>
-                <pre><code class="language-csharp">
-using System;
-using System.IO;
-
-class PhotoViewer
-{
-    static void Main()
-    {
-        string[] files = Directory.GetFiles("C:/Photos");
-        foreach (var file in files)
-        {
-            Console.WriteLine(file);
-        }
-    }
-}
-                </code></pre>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Me -->
-    <section class="bg-white py-5">
-      <div class="container px-5">
-        <div class="row gx-5 justify-content-center">
-          <div class="col-xxl-8">
-            <div class="text-center my-5">
-              <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-              <p class="lead fw-light mb-4">My name is Sacha Scholten.</p>
-              <p class="text-muted">I’m passionate about creating beautiful things with code and visuals. Whether it's C# applications or photography, I love building and sharing ideas.</p>
-              <div class="d-flex justify-content-center fs-2 gap-4">
-                <a class="text-gradient" href="#"><i class="bi bi-twitter"></i></a>
-                <a class="text-gradient" href="#"><i class="bi bi-linkedin"></i></a>
-                <a class="text-gradient" href="#"><i class="bi bi-github"></i></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </header>
+
+      <!-- Main Layout -->
+      <section class="container-fluid projects-container">
+        <div class="row">
+          <!-- Sidebar -->
+          <aside class="col-md-3 col-lg-2 sidebar bg-light p-4 shadow-sm">
+            <h5 class="text-center fw-bold">My Projects</h5>
+            <nav class="d-flex flex-column">
+              <a href="nightracer.html">Project: Nightracer</a>
+              <a href="Kampvuur.html">Project: Kampvuur</a>
+              <a href="Verloren Moeder.html">Project: Verloren Moeder</a>
+              <a href="vr-ghost-game.html">Project: VR AR Ghost Dusters</a>
+              <a href="GetCooked.html">Project: GetCooked</a>
+              <a href="mini-games.html">Project: Mini Games</a>
+            </nav>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="col-md-9 col-lg-10 px-4">
+
+            <section class="mb-5">
+  <h2 class="fw-bold text-center mb-4">Bekijk mijn video</h2>
+  <div class="ratio ratio-16x9">
+    <video controls>
+      <source src="assets/LostMom_AltEgo - 2025.mp4" type="video/mp4" />
+      Je browser ondersteunt dit videoformaat niet.
+    </video>
+  </div>
+</section>
+
+
+            <!-- Project 1 -->
+            <section class="mb-5">
+              <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                  <img src="assets/Idle_hond.gif" class="img-fluid rounded shadow" alt="Project 1" />
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <h3 class="fw-bold">Verloren moeder</h3>
+                  <p class="text-muted small">voor de Game voor de film studenten moesten we hun idee waar maken en mijn project was een klein meisje die heel erg eigenwijs is en de wereld wil verkennen hierbij laat ik zien wat er als basis nodig was voor de game.</p>
+                  </div>
+              </div>
+            </section>
+
+            <!-- Project 2 -->
+            <section class="mb-5">
+              <div class="row align-items-center">
+                <div class="col-md-6 text-center order-md-2">
+                  <img src="assets/walk_hond.gif" class="img-fluid rounded shadow" alt="Project 2" />
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0 order-md-1">
+                  <h3 class="fw-bold">De hond idle en walk</h3>
+                  <p class="text-muted small">De film student wou als eerst een hond hebben waar een interactie voor moest komen waar jij als speler de ball ging lopen en dat de hond er naar toe ging lopen en dan naar 3x dat de hond de hal niet meer ging halen</p>
+                  <img src="assets/image.png" class="img-fluid mt-3 rounded shadow" alt="Code afbeelding project 2" />
+                </div>
+              </div>
+            </section>
+
+            <!-- Project 3 -->
+            <section class="mb-5">
+              <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                  <img src="assets/image (3).png" class="img-fluid rounded shadow" alt="Project 3" />
+                  <img src="assets/image (4).png" class="img-fluid rounded shadow" alt="Project 3" />
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <h3 class="fw-bold">Time line</h3>
+                  <p class="text-muted small">ik heb samen met de film student gezeten na een paar weken om een nieuwe timeline in elkaar te maken, omdat we van de hond niks uit konden krijgen dus moesten we voor nieuwe dingen zorgen om toch een lange gameplay te krijgen, want anders was het met 2 min al klaar de game zelf, dus ik er voor gezorgd met de filmstudent samen om een betere timeline te hebben staan.
+
+Dit is de timeline waar we meegekomen zijn en dat ook door het hele team in elkaar is gezet, omdat iedereen aan iets heeft gewerkt en de meeste weten dan ook niet hoe alles werkt</p>
+                  
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section class="bg-white py-5">
+        <div class="container px-5">
+          <div class="row gx-5 justify-content-center">
+            <div class="col-xxl-8">
+              <div class="text-center my-5">
+                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
+                <p class="lead fw-light mb-4">My name is Sacha Scholten.</p>
+                <p class="text-muted">I’m passionate about creating beautiful things with code and visuals. Whether it's C# applications or photography, I love building and sharing ideas.</p>
+                <div class="d-flex justify-content-center fs-2 gap-4">
+                  <a class="text-gradient" href="#"><i class="bi bi-twitter"></i></a>
+                  <a class="text-gradient" href="#"><i class="bi bi-linkedin"></i></a>
+                  <a class="text-gradient" href="#"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-white py-4 mt-auto">
@@ -240,9 +214,7 @@ class PhotoViewer
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
   </body>
 </html>
