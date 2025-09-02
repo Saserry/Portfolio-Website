@@ -57,6 +57,27 @@
       .projects-container {
         margin-top: 3rem;
       }
+
+      /* Sidebar project cards */
+      .sidebar .card {
+        cursor: pointer;
+      }
+      .sidebar .card img {
+        height: 100px;
+        object-fit: cover;
+      }
+      .sidebar .card-body {
+        padding: 0.5rem;
+      }
+      .sidebar h6 {
+        font-size: 0.9rem;
+      }
+      .sidebar p {
+        font-size: 0.75rem;
+      }
+      .sidebar .badge {
+        font-size: 0.65rem;
+      }
     </style>
   </head>
 
@@ -103,31 +124,87 @@
       <section class="container-fluid projects-container">
         <div class="row">
           <!-- Sidebar -->
-          <aside class="col-md-3 col-lg-2 sidebar bg-light p-4 shadow-sm">
-            <h5 class="text-center fw-bold">My Projects</h5>
-            <nav class="d-flex flex-column">
-              <a href="nightracer.html">Project: Nightracer</a>
-              <a href="Kampvuur.html">Project: Kampvuur</a>
-              <a href="Verloren Moeder.html">Project: Verloren Moeder</a>
-              <a href="vr-ghost-game.html">Project: VR AR Ghost Dusters</a>
-              <a href="GetCooked.html">Project: GetCooked</a>
-              <a href="mini-games.html">Project: Mini Games</a>
-            </nav>
+          <aside class="col-md-3 col-lg-2 sidebar bg-light p-3 shadow-sm">
+            <h5 class="text-center fw-bold mb-3">My Projects</h5>
+
+            <!-- Project: Nightracer -->
+            <div class="card mb-3 shadow-sm border-0" onclick="location.href='nightracer.html'">
+              <img src="assets/oldtimer.png" class="card-img-top" alt="Nightracer" />
+              <div class="card-body">
+                <h6 class="fw-bold mb-1">Nightracer</h6>
+                <div class="mb-1">
+                  <span class="badge bg-secondary">Group</span>
+                  <span class="badge bg-dark">Unity</span>
+                  <span class="badge bg-info text-dark">C#</span>
+                </div>
+                <p class="text-muted mb-0">Race met een oldtimer door een mysterieus kerkhof.</p>
+              </div>
+            </div>
+
+            <!-- Project: Kampvuur -->
+            <div class="card mb-3 shadow-sm border-0" onclick="location.href='Kampvuur.html'">
+              <img src="assets/4.gif" class="card-img-top" alt="Kampvuur" />
+              <div class="card-body">
+                <h6 class="fw-bold mb-1">Kampvuur</h6>
+                <div class="mb-1">
+                  <span class="badge bg-dark">Unity</span>
+                  <span class="badge bg-info text-dark">C#</span>
+                </div>
+                <p class="text-muted mb-0">Een sfeervolle interactie rond een digitaal kampvuur.</p>
+              </div>
+            </div>
+
+            <!-- Project: Verloren Moeder -->
+            <div class="card mb-3 shadow-sm border-0" onclick="location.href='Verloren Moeder.html'">
+              <img src="assets/child.jpg" class="card-img-top" alt="Verloren Moeder" />
+              <div class="card-body">
+                <h6 class="fw-bold mb-1">Verloren Moeder</h6>
+                <div class="mb-1">
+                  <span class="badge bg-secondary">Collab</span>
+                  <span class="badge bg-dark">Unity</span>
+                </div>
+                <p class="text-muted mb-0">Een emotioneel spel gebaseerd op een filmproject.</p>
+              </div>
+            </div>
+
+            <!-- Project: GetCooked -->
+            <div class="card mb-3 shadow-sm border-0" onclick="location.href='GetCooked.html'">
+              <img src="assets/banner.png" class="card-img-top" alt="GetCooked" />
+              <div class="card-body">
+                <h6 class="fw-bold mb-1">GetCooked</h6>
+                <div class="mb-1">
+                  <span class="badge bg-dark">Unity</span>
+                  <span class="badge bg-info text-dark">C#</span>
+                </div>
+                <p class="text-muted mb-0">Chaos in de keuken, maar digitaal.</p>
+              </div>
+            </div>
+
+            <!-- Project: Mini Games -->
+            <div class="card mb-3 shadow-sm border-0" onclick="location.href='mini-games.html'">
+              <img src="assets/javascript.png" class="card-img-top" alt="Mini Games" />
+              <div class="card-body">
+                <h6 class="fw-bold mb-1">Mini Games</h6>
+                <div class="mb-1">
+                  <span class="badge bg-secondary">Solo</span>
+                </div>
+                <p class="text-muted mb-0">Kleine experimenten met leuke mechanics.</p>
+              </div>
+            </div>
           </aside>
 
           <!-- Main Content -->
           <div class="col-md-9 col-lg-10 px-4">
 
             <section class="mb-5">
-  <h2 class="fw-bold text-center mb-4">Bekijk mijn video</h2>
-  <div class="ratio ratio-16x9">
-    <video controls>
-      <source src="assets/LostMom_AltEgo - 2025.mp4" type="video/mp4" />
-      Je browser ondersteunt dit videoformaat niet.
-    </video>
-  </div>
-</section>
-
+              <h2 class="fw-bold text-center mb-4">Bekijk mijn video</h2>
+              <div class="ratio ratio-16x9">
+                <video controls>
+                  <source src="assets/LostMom_AltEgo - 2025.mp4" type="video/mp4" />
+                  Je browser ondersteunt dit videoformaat niet.
+                </video>
+              </div>
+            </section>
 
             <!-- Project 1 -->
             <section class="mb-5">
@@ -138,7 +215,7 @@
                 <div class="col-md-6 mt-3 mt-md-0">
                   <h3 class="fw-bold">Verloren moeder</h3>
                   <p class="text-muted small">voor de Game voor de film studenten moesten we hun idee waar maken en mijn project was een klein meisje die heel erg eigenwijs is en de wereld wil verkennen hierbij laat ik zien wat er als basis nodig was voor de game.</p>
-                  </div>
+                </div>
               </div>
             </section>
 
@@ -168,7 +245,6 @@
                   <p class="text-muted small">ik heb samen met de film student gezeten na een paar weken om een nieuwe timeline in elkaar te maken, omdat we van de hond niks uit konden krijgen dus moesten we voor nieuwe dingen zorgen om toch een lange gameplay te krijgen, want anders was het met 2 min al klaar de game zelf, dus ik er voor gezorgd met de filmstudent samen om een betere timeline te hebben staan.
 
 Dit is de timeline waar we meegekomen zijn en dat ook door het hele team in elkaar is gezet, omdat iedereen aan iets heeft gewerkt en de meeste weten dan ook niet hoe alles werkt</p>
-                  
                 </div>
               </div>
             </section>
