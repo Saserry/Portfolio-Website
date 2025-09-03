@@ -50,6 +50,28 @@
         font-size: 2rem;
         margin-bottom: 0.5rem;
       }
+
+      /* About-sectie foto styling */
+      .about-section img {
+        max-width: 250px;
+        border-radius: 15px;
+      }
+
+      /* Grotere social icons */
+      .social-icons a i {
+        font-size: 3.5rem;
+      }
+
+      @media (max-width: 767px) {
+        .about-section {
+          text-align: center;
+        }
+
+        .about-section img {
+          margin-top: 20px;
+          max-width: 200px;
+        }
+      }
     </style>
   </head>
   <body class="d-flex flex-column h-100">
@@ -75,7 +97,6 @@
       <header class="py-5 bg-light">
         <div class="container px-5">
           <div class="row align-items-center">
-            <!-- Foto -->
             <div class="col-md-4 text-center mb-4 mb-md-0">
               <img
                 src="assets/pro 2.png"
@@ -84,34 +105,46 @@
                 width="312"
               />
             </div>
-
-            <!-- Tekst -->
             <div class="col-md-8 text-center text-md-start">
               <h1 class="fw-bold text-gradient">Hi, ik ben Sacha Scholten</h1>
               <p class="lead text-muted">
                 Creative software developer & Grafisch designer
               </p>
-              </a>
             </div>
           </div>
         </div>
       </header>
 
-      <!-- About Section -->
-      <section class="py-5">
+      <!-- About Section met kleinere foto rechts -->
+      <section class="py-5 about-section">
         <div class="container px-5">
-          <h2 class="text-center text-gradient fw-bold mb-4">Over mij</h2>
-          <p class="text-center text-muted">
-            Hoi! Ik ben Sacha Scholten, 24 jaar oud. 
-          </p>
-          <div class="d-flex justify-content-center gap-4 mt-4 fs-4">
-            <a href="https://www.linkedin.com/in/sacha-scholten-587094306/" target="_blank" class="text-gradient" title="LinkedIn">
-              <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="https://github.com/Saserry" target="_blank" class="text-gradient" title="GitHub">
-              <i class="bi bi-github"></i>
-            </a>
-            
+          <div class="row align-items-center">
+            <!-- Tekst links -->
+            <div class="col-md-6 order-md-1">
+              <h2 class="text-gradient fw-bold mb-4">Over mij</h2>
+              <p class="text-muted">
+                Hoi! Ik ben Sacha Scholten, 24 jaar oud. 
+                Ik ben op het Gra Lyceum Utrecht begonnen met de opleiding als Grafisch Voormgever en heb deze afgerond, waarna ik ben uitgegroeid als software developer.
+                Ik ben begonnen als Game Developer voor 2 jaar, daarna besloot ik de opleiding Creative Software Developer te volgen om meer te leren over verschillende programmeertalen.
+              </p>
+              <h4 class="text-gradient fw-bold mb-4">Vrije tijd</h4>
+              <p class="text-muted">
+                In mijn vrije tijd kijk ik graag films of ga ik naar de bioscoop. Ook teken ik veel (ik ben geen meester, maar overtrek graag).
+              </p>
+              <div class="d-flex gap-4 mt-4 social-icons">
+                <a href="https://www.linkedin.com/in/sacha-scholten-587094306/" target="_blank" class="text-gradient" title="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/Saserry" target="_blank" class="text-gradient" title="GitHub">
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Foto rechts -->
+            <div class="col-md-6 text-center order-md-2">
+              <img src="assets/Nemo_2.png" alt="Sacha Scholten" />
+            </div>
           </div>
         </div>
       </section>
@@ -150,25 +183,25 @@
         </div>
       </section>
 
-    <!-- Footer -->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto">
-            <div class="small m-0">&copy; Sacha Scholten 2025</div>
-          </div>
-          <div class="col-auto">
-            <a class="small" href="#">Privacy</a>
-            <span class="mx-1">&middot;</span>
-            <a class="small" href="#">Voorwaarden</a>
-            <span class="mx-1">&middot;</span>
-            <a class="small" href="#">Contact</a>
+      <!-- Footer -->
+      <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+          <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+              <div class="small m-0">&copy; Sacha Scholten 2025</div>
+            </div>
+            <div class="col-auto">
+              <a class="small" href="#">Privacy</a>
+              <span class="mx-1">&middot;</span>
+              <a class="small" href="#">Voorwaarden</a>
+              <span class="mx-1">&middot;</span>
+              <a class="small" href="#">Contact</a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
