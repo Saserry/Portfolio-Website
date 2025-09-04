@@ -11,11 +11,20 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <style>
       body {
@@ -28,13 +37,11 @@
         transition: transform 0.2s;
       }
 
-      /* Pastel gradient for header background */
       header.py-5 {
         background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
         color: #5a5a5a;
       }
 
-      /* Pastel gradient for badge */
       .badge.bg-gradient-primary-to-secondary {
         background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
         color: #4a3c31;
@@ -42,14 +49,12 @@
         letter-spacing: 1px;
       }
 
-      /* Optional: pastel gradient text for About Me heading */
       .text-gradient {
         background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
-      /* Optional: pastel colored icons in About Me section */
       .text-gradient > i {
         color: #fda085;
         transition: color 0.3s ease;
@@ -58,14 +63,8 @@
         color: #a8edea;
       }
 
-      /* Margin boven projecten om ruimte onder header te creëren */
       .projects-container {
         margin-top: 3rem;
-      }
-
-      /* Toggle knop stijl */
-      .toggle-btn {
-        margin-bottom: 1rem;
       }
     </style>
   </head>
@@ -75,14 +74,25 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
           <a class="navbar-brand fw-bold text-primary" href="#">Sacha Scholten</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto fw-semibold small">
-              <li class="nav-item mx-3"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="About me.html">About Me</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="About me.html">About Me</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -94,17 +104,32 @@
           <div class="row gx-5 align-items-center">
             <div class="col-xxl-6">
               <div class="text-center text-xxl-start">
-                <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
-                  <div class="text-uppercase">Design · Development · Creativity</div>
+                <div
+                  class="badge bg-gradient-primary-to-secondary text-white mb-4"
+                >
+                  <div class="text-uppercase">
+                    Design · Development · Creativity
+                  </div>
                 </div>
                 <h1 class="fw-bolder mb-3">Welcome bij Get Cooked!</h1>
-                <p class="lead fw-normal text-muted mb-4">Here you’ll find my C# code, photos, and creative work.</p>
-                <a class="btn btn-dark btn-sm" href="https://gitlab.glu.nl/900225/periode8project" target="_blank">
+                <p class="lead fw-normal text-muted mb-4">
+                  Get cooked! is een game die we als belangrijkste prioriteit hadden staan om het op de Playstore te zetten, dus een moblie/tablet game. 
+                  De game is bedoelt voor alle leeftijden, dus van jong tot oud kunnen mensen het spelen.
+                </p>
+                <a
+                  class="btn btn-dark btn-sm"
+                  href="https://gitlab.glu.nl/900225/periode8project"
+                  target="_blank"
+                >
                   <i class="bi bi-github me-1"></i> GitHub
                 </a>
-                <a class="btn btn-danger btn-sm" href="https://9-to-five.itch.io/get-cooked" target="_blank">
-  <i class="bi bi-controller me-1"></i> itch.io
-</a>
+                <a
+                  class="btn btn-danger btn-sm"
+                  href="https://9-to-five.itch.io/get-cooked"
+                  target="_blank"
+                >
+                  <i class="bi bi-controller me-1"></i> itch.io
+                </a>
               </div>
             </div>
           </div>
@@ -114,214 +139,176 @@
       <!-- Main Layout -->
       <section class="container-fluid projects-container">
         <div class="row">
-         <!-- Sidebar -->
-       <aside class="col-md-3 col-lg-2 sidebar bg-light p-3 shadow-sm">
+          <!-- Sidebar -->
+          <aside class="col-md-3 col-lg-2 sidebar bg-light p-3 shadow-sm">
             <h5 class="text-center fw-bold mb-3">My Projects</h5>
 
-            <!-- Project: Nightracer -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='nightracer.html'">
-              <img src="assets/oldtimer.png" class="card-img-top" alt="Nightracer" />
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='nightracer.html'"
+            >
+              <img
+                src="assets/oldtimer.png"
+                class="card-img-top"
+                alt="Nightracer"
+              />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Nightracer</h6>
-                <div class="mb-1">
-                  <span class="badge bg-secondary">Group</span>
-                  <span class="badge bg-dark">Unity</span>
-                  <span class="badge bg-info text-dark">C#</span>
-                </div>
-                <p class="text-muted mb-0">Race met een oldtimer door een mysterieus kerkhof.</p>
+                <p class="text-muted mb-0">
+                  Race met een oldtimer door een mysterieus kerkhof.
+                </p>
               </div>
             </div>
 
-            <!-- Project: Kampvuur -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='Kampvuur.html'">
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='Kampvuur.html'"
+            >
               <img src="assets/4.gif" class="card-img-top" alt="Kampvuur" />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Kampvuur</h6>
-                <div class="mb-1">
-                  <span class="badge bg-dark">Unity</span>
-                  <span class="badge bg-info text-dark">C#</span>
-                </div>
-                <p class="text-muted mb-0">Een sfeervolle interactie rond een digitaal kampvuur.</p>
+                <p class="text-muted mb-0">
+                  Een sfeervolle interactie rond een digitaal kampvuur.
+                </p>
               </div>
             </div>
 
-            <!-- Project: Verloren Moeder -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='Verloren Moeder.html'">
-              <img src="assets/child.jpg" class="card-img-top" alt="Verloren Moeder" />
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='Verloren Moeder.html'"
+            >
+              <img
+                src="assets/child.jpg"
+                class="card-img-top"
+                alt="Verloren Moeder"
+              />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Verloren Moeder</h6>
-                <div class="mb-1">
-                  <span class="badge bg-secondary">Collab</span>
-                  <span class="badge bg-dark">Unity</span>
-                </div>
-                <p class="text-muted mb-0">Een emotioneel spel gebaseerd op een filmproject.</p>
+                <p class="text-muted mb-0">
+                  Een emotioneel spel gebaseerd op een filmproject.
+                </p>
               </div>
             </div>
 
-            <!-- Project: GetCooked -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='GetCooked.html'">
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='GetCooked.html'"
+            >
               <img src="assets/banner.png" class="card-img-top" alt="GetCooked" />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">GetCooked</h6>
-                <div class="mb-1">
-                  <span class="badge bg-dark">Unity</span>
-                  <span class="badge bg-info text-dark">C#</span>
-                </div>
                 <p class="text-muted mb-0">Chaos in de keuken, maar digitaal.</p>
               </div>
             </div>
 
-            <!-- Project: Mini Games -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='mini-games.html'">
-              <img src="assets/javascript.png" class="card-img-top" alt="Mini Games" />
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='mini-games.html'"
+            >
+              <img
+                src="assets/javascript.png"
+                class="card-img-top"
+                alt="Mini Games"
+              />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Mini Games</h6>
-                <div class="mb-1">
-                  <span class="badge bg-secondary">Solo</span>
-                </div>
-                <p class="text-muted mb-0">Kleine experimenten met leuke mechanics.</p>
+                <p class="text-muted mb-0">
+                  Kleine experimenten met leuke mechanics.
+                </p>
               </div>
             </div>
           </aside>
 
-
           <!-- Main Content -->
           <div class="col-md-9 col-lg-10 px-4">
-            <!-- Project 1 -->
             <section id="project1" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                  <img src="assets/photo1.jpg" class="img-fluid rounded shadow" alt="Project 1" />
+                  <img
+                    src="assets/photo1.jpg"
+                    class="img-fluid rounded shadow"
+                    alt="Project 1"
+                  />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0">
-                  <h3 class="fw-bold">Project 1: Hello Console</h3>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code1', this)">Toon Code</button>
-                  <pre id="code1" class="d-none"><code class="language-csharp">
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Hello, world!");
-    }
-}
-                  </code></pre>
+                  <h3 class="fw-bold">De base game</h3>
+                  <p class="text-muted small">
+                    De basis van de game is vooral dat je de klanten hun bestelling maakt en dat je dat ook zo snel mogelijk doet, en de klanten ook blij blijfen.
+                    en dat je dan ook zo veel mogelijk geld opspaart van de klanten.
+                  </p>
                 </div>
               </div>
             </section>
 
-            <!-- Project 2 -->
             <section id="project2" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center order-md-2">
-                  <img src="assets/photo2.jpg" class="img-fluid rounded shadow" alt="Project 2" />
+                  <img
+                    src="assets/photo2.jpg"
+                    class="img-fluid rounded shadow"
+                    alt="Project 2"
+                  />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-                  <h3 class="fw-bold">Project 2: Calculator</h3>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code2', this)">Toon Code</button>
-                  <pre id="code2" class="d-none"><code class="language-csharp">
-using System;
-
-class Calculator
-{
-    static int Add(int a, int b) => a + b;
-
-    static void Main()
-    {
-        Console.WriteLine(Add(3, 5));
-    }
-}
-                  </code></pre>
+                  <h3 class="fw-bold">Het koken van het voedsel</h3>
+                  <p class="text-muted small">
+                    De manier van koken gaat door een ScriptableObject, daar in staat all info van het koken is, Dus hoe de 3 main gerechten worden gemaakt.
+                    Want hij moet kunnen zien bij welk gerecht wat voor ingredienten in zitten, en je kan daar er in aan geven voor welk gerecht hoe veel van ieder ingredient nodig is.
+                  </p>
                 </div>
               </div>
             </section>
 
-            <!-- Project 3 -->
             <section id="project3" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                  <img src="assets/photo3.jpg" class="img-fluid rounded shadow" alt="Project 3" />
+                  <img
+                    src="assets/photo3.jpg"
+                    class="img-fluid rounded shadow"
+                    alt="Project 3"
+                  />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0">
-                  <h3 class="fw-bold">Project 3: Web Scraper</h3>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code3', this)">Toon Code</button>
-                  <pre id="code3" class="d-none"><code class="language-csharp">
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-class Scraper
-{
-    static async Task Main()
-    {
-        var client = new HttpClient();
-        var html = await client.GetStringAsync("https://example.com");
-        Console.WriteLine(html);
-    }
-}
-                  </code></pre>
+                  <h3 class="fw-bold">De ingredient kaartjes</h3>
+                  <p class="text-muted small">
+                    Dit zijn de kaartjes die de speler gebruikt zo dat die kan zien wat er in de gerechten in moet zitten en of de hoeveelheid er ook in zit.
+                  </p>
                 </div>
               </div>
             </section>
 
-            <!-- Project 4 -->
             <section id="project4" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center order-md-2">
-                  <img src="assets/photo4.jpg" class="img-fluid rounded shadow" alt="Project 4" />
+                  <img
+                    src="assets/banner.png"
+                    class="img-fluid rounded shadow"
+                    alt="GetCooked"
+                  />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-                  <h3 class="fw-bold">Project 4: Photo Viewer</h3>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code4', this)">Toon Code</button>
-                  <pre id="code4" class="d-none"><code class="language-csharp">
-using System;
-using System.IO;
-
-class PhotoViewer
-{
-    static void Main()
-    {
-        string[] files = Directory.GetFiles("C:/Photos");
-        foreach (var file in files)
-        {
-            Console.WriteLine(file);
-        }
-    }
-}
-                  </code></pre>
+                  <h3 class="fw-bold">GetCooked</h3>
+                  <p class="text-muted small">
+                    Chaos in de keuken, maar digitaal.
+                  </p>
                 </div>
               </div>
             </section>
 
-            <!-- Project 5 -->
             <section id="project5" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                  <img src="assets/photo5.jpg" class="img-fluid rounded shadow" alt="Project 5" />
+                  <img
+                    src="assets/javascript.png"
+                    class="img-fluid rounded shadow"
+                    alt="Mini Games"
+                  />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0">
-                  <h3 class="fw-bold">Project 5: Example Project</h3>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code5', this)">Toon Code</button>
-                  <pre id="code5" class="d-none"><code class="language-csharp">
-// Voeg hier je code toe
-                  </code></pre>
-                </div>
-              </div>
-            </section>
-
-            <!-- Project 6 -->
-            <section id="project6" class="mb-5">
-              <div class="row align-items-center">
-                <div class="col-md-6 text-center order-md-2">
-                  <img src="assets/photo6.jpg" class="img-fluid rounded shadow" alt="Project 6" />
-                </div>
-                <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-                  <h3 class="fw-bold">Project 6: Example Project 2</h3>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code6', this)">Toon Code</button>
-                  <pre id="code6" class="d-none"><code class="language-csharp">
-// Voeg hier je code toe
-                  </code></pre>
+                  <h3 class="fw-bold">Mini Games</h3>
+                  <p class="text-muted small">
+                    Kleine experimenten met leuke mechanics.
+                  </p>
                 </div>
               </div>
             </section>
@@ -335,13 +322,25 @@ class PhotoViewer
           <div class="row gx-5 justify-content-center">
             <div class="col-xxl-8">
               <div class="text-center my-5">
-                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
+                <h2 class="display-5 fw-bolder">
+                  <span class="text-gradient d-inline">About Me</span>
+                </h2>
                 <p class="lead fw-light mb-4">My name is Sacha Scholten.</p>
-                <p class="text-muted">I’m passionate about creating beautiful things with code and visuals. Whether it's C# applications or photography, I love building and sharing ideas.</p>
+                <p class="text-muted">
+                  I’m passionate about creating beautiful things with code and
+                  visuals. Whether it's C# applications or photography, I love
+                  building and sharing ideas.
+                </p>
                 <div class="d-flex justify-content-center fs-2 gap-4">
-                  <a class="text-gradient" href="#"><i class="bi bi-twitter"></i></a>
-                  <a class="text-gradient" href="#"><i class="bi bi-linkedin"></i></a>
-                  <a class="text-gradient" href="#"><i class="bi bi-github"></i></a>
+                  <a class="text-gradient" href="#"
+                    ><i class="bi bi-twitter"></i
+                  ></a>
+                  <a class="text-gradient" href="#"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a class="text-gradient" href="#"
+                    ><i class="bi bi-github"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -353,8 +352,12 @@ class PhotoViewer
     <!-- Footer -->
     <footer class="bg-white py-4 mt-auto">
       <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto"><div class="small m-0">© Sacha Scholten 2025</div></div>
+        <div
+          class="row align-items-center justify-content-between flex-column flex-sm-row"
+        >
+          <div class="col-auto">
+            <div class="small m-0">© Sacha Scholten 2025</div>
+          </div>
           <div class="col-auto">
             <a class="small" href="#">Privacy</a>
             <span class="mx-1">·</span>
@@ -368,19 +371,5 @@ class PhotoViewer
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-    <script>
-      function toggleCode(codeId, btn) {
-        const codeBlock = document.getElementById(codeId);
-        if (codeBlock.classList.contains('d-none')) {
-          codeBlock.classList.remove('d-none');
-          btn.textContent = 'Verberg Code';
-        } else {
-          codeBlock.classList.add('d-none');
-          btn.textContent = 'Toon Code';
-        }
-      }
-    </script>
   </body>
 </html>
