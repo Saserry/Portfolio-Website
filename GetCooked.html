@@ -26,6 +26,12 @@
     .text-gradient > i:hover { color: #a8edea; }
     .projects-container { margin-top: 3rem; }
     video.project-video { width: 100%; max-width: 800px; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+    /* Project 2 afbeeldingen naast elkaar */
+    .img-side-by-side {
+      height: 450px;  /* grotere hoogte voor meer zichtbaarheid */
+      width: auto;    /* breedte schaalt automatisch */
+    }
   </style>
 </head>
 <body class="d-flex flex-column h-100">
@@ -128,42 +134,25 @@
             <div class="col-md-6 mt-3 mt-md-0">
               <h3 class="fw-bold">De base game</h3>
               <p class="text-muted small">
-                De basis van de game is vooral dat je de klanten hun bestelling maakt en dat je dat ook zo snel mogelijk doet, en de klanten ook blij blijfen.
-                en dat je dan ook zo veel mogelijk geld opspaart van de klanten.
+                De basis van de game is vooral dat je de klanten hun bestelling maakt en dat je dat ook zo snel mogelijk doet, en de klanten ook blij blijven.
+                En dat je dan ook zo veel mogelijk geld opspaart van de klanten.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- Project 2 met carousel -->
+        <!-- Project 2: Afbeeldingen naast elkaar met kleinere tekst -->
         <section id="project2" class="mb-5">
           <div class="row align-items-center">
-            <div class="col-md-6 text-center order-md-2">
-              <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/2-1.png" class="d-block w-100 rounded shadow" alt="Project 2 - 1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/2-2.png" class="d-block w-100 rounded shadow" alt="Project 2 - 2">
-                  </div>
-                  
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-            <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-              <h3 class="fw-bold">Het koken van het voedsel</h3>
-              <p class="text-muted small">
+            <div class="col-md-4 mt-3 mt-md-0 order-md-1">
+              <h3 class="fw-bold fs-5">Het koken van het voedsel</h3>
+              <p class="text-muted fs-6">
                 De manier van koken gaat door een ScriptableObject, daar in staat alle info van het koken. Hoe de 3 main gerechten worden gemaakt. De speler kan zien bij welk gerecht welke ingredienten horen en hoeveel nodig zijn.
               </p>
+            </div>
+            <div class="col-md-8 text-center order-md-2 d-flex justify-content-center gap-3 flex-wrap">
+              <img src="assets/2-1.png" class="img-side-by-side rounded shadow" alt="Project 2 - 1">
+              <img src="assets/2-2.png" class="img-side-by-side rounded shadow" alt="Project 2 - 2">
             </div>
           </div>
         </section>
@@ -172,7 +161,7 @@
         <section id="project3" class="mb-5">
           <div class="row align-items-center">
             <div class="col-md-6 text-center">
-              <img src="assets/photo3.jpg" class="img-fluid rounded shadow" alt="Project 3" />
+              <img src="assets/kaarten.gif" class="img-fluid rounded shadow" alt="Project 3" />
             </div>
             <div class="col-md-6 mt-3 mt-md-0">
               <h3 class="fw-bold">De ingredient kaartjes</h3>
@@ -182,39 +171,6 @@
             </div>
           </div>
         </section>
-
-        <!-- Project 4 -->
-        <section id="project4" class="mb-5">
-          <div class="row align-items-center">
-            <div class="col-md-6 text-center order-md-2">
-              <img src="assets/banner.png" class="img-fluid rounded shadow" alt="GetCooked" />
-            </div>
-            <div class="col-md-6 mt-3 mt-md-0 order-md-1">
-              <h3 class="fw-bold">GetCooked</h3>
-              <p class="text-muted small">
-                Chaos in de keuken, maar digitaal.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Project 5 -->
-        <section id="project5" class="mb-5">
-          <div class="row align-items-center">
-            <div class="col-md-6 text-center">
-              <img src="assets/javascript.png" class="img-fluid rounded shadow" alt="Mini Games" />
-            </div>
-            <div class="col-md-6 mt-3 mt-md-0">
-              <h3 class="fw-bold">Mini Games</h3>
-              <p class="text-muted small">
-                Kleine experimenten met leuke mechanics.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </section>
 
   <!-- About Me -->
   <section class="bg-white py-5">
