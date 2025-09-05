@@ -11,15 +11,30 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- PrismJS CSS (donker thema) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
 
     <style>
       body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: "Plus Jakarta Sans", sans-serif;
       }
 
       .card:hover {
@@ -67,6 +82,12 @@
       .toggle-btn {
         margin-bottom: 1rem;
       }
+
+      /* Codeblokken mooier maken */
+      pre {
+        border-radius: 10px;
+        padding: 1rem;
+      }
     </style>
   </head>
   <body class="d-flex flex-column h-100">
@@ -75,14 +96,25 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
           <a class="navbar-brand fw-bold text-primary" href="#">Sacha Scholten</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto fw-semibold small">
-              <li class="nav-item mx-3"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="About me.html">About Me</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="About me.html">About Me</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -94,12 +126,23 @@
           <div class="row gx-5 align-items-center">
             <div class="col-xxl-6">
               <div class="text-center text-xxl-start">
-                <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
-                  <div class="text-uppercase">Design · Development · Creativity</div>
+                <div
+                  class="badge bg-gradient-primary-to-secondary text-white mb-4"
+                >
+                  <div class="text-uppercase">
+                    Design · Development · Creativity
+                  </div>
                 </div>
                 <h1 class="fw-bolder mb-3">Welcome bij Nightracer</h1>
-                <p class="lead fw-normal text-muted mb-4">Here you’ll find my C# code, photos, and creative work.</p>
-                <a class="btn btn-dark btn-sm" href="https://gitlab.glu.nl/530806/night-racer" target="_blank">
+                <p class="lead fw-normal text-muted mb-4">
+                  Hier ga ik je wat vertellen over de game nightracer waar het main onderdeel van de game was een auto maken die in Unity een WheelCollider gebruikt.
+                  zo dat de auto ook echt een gevoel geeft of die wielen dan ook draaien.
+                </p>
+                <a
+                  class="btn btn-dark btn-sm"
+                  href="https://gitlab.glu.nl/530806/night-racer"
+                  target="_blank"
+                >
                   <i class="bi bi-github me-1"></i> GitHub
                 </a>
               </div>
@@ -116,8 +159,15 @@
             <h5 class="text-center fw-bold mb-3">My Projects</h5>
 
             <!-- Project: Nightracer -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='nightracer.html'">
-              <img src="assets/oldtimer.png" class="card-img-top" alt="Nightracer" />
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='nightracer.html'"
+            >
+              <img
+                src="assets/oldtimer.png"
+                class="card-img-top"
+                alt="Nightracer"
+              />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Nightracer</h6>
                 <div class="mb-1">
@@ -125,12 +175,17 @@
                   <span class="badge bg-dark">Unity</span>
                   <span class="badge bg-info text-dark">C#</span>
                 </div>
-                <p class="text-muted mb-0">Race met een oldtimer door een mysterieus kerkhof.</p>
+                <p class="text-muted mb-0">
+                  Race met een oldtimer door een mysterieus kerkhof.
+                </p>
               </div>
             </div>
 
             <!-- Project: Kampvuur -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='Kampvuur.html'">
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='Kampvuur.html'"
+            >
               <img src="assets/4.gif" class="card-img-top" alt="Kampvuur" />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Kampvuur</h6>
@@ -138,12 +193,17 @@
                   <span class="badge bg-dark">Unity</span>
                   <span class="badge bg-info text-dark">C#</span>
                 </div>
-                <p class="text-muted mb-0">Een sfeervolle interactie rond een digitaal kampvuur.</p>
+                <p class="text-muted mb-0">
+                  Een sfeervolle interactie rond een digitaal kampvuur.
+                </p>
               </div>
             </div>
 
             <!-- Project: Verloren Moeder -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='Verloren Moeder.html'">
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='Verloren Moeder.html'"
+            >
               <img src="assets/child.jpg" class="card-img-top" alt="Verloren Moeder" />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Verloren Moeder</h6>
@@ -151,12 +211,17 @@
                   <span class="badge bg-secondary">Collab</span>
                   <span class="badge bg-dark">Unity</span>
                 </div>
-                <p class="text-muted mb-0">Een emotioneel spel gebaseerd op een filmproject.</p>
+                <p class="text-muted mb-0">
+                  Een emotioneel spel gebaseerd op een filmproject.
+                </p>
               </div>
             </div>
 
             <!-- Project: GetCooked -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='GetCooked.html'">
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='GetCooked.html'"
+            >
               <img src="assets/banner.png" class="card-img-top" alt="GetCooked" />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">GetCooked</h6>
@@ -169,31 +234,56 @@
             </div>
 
             <!-- Project: Mini Games -->
-            <div class="card mb-3 shadow-sm border-0" onclick="location.href='mini-games.html'">
-              <img src="assets/javascript.png" class="card-img-top" alt="Mini Games" />
+            <div
+              class="card mb-3 shadow-sm border-0"
+              onclick="location.href='mini-games.html'"
+            >
+              <img
+                src="assets/javascript.png"
+                class="card-img-top"
+                alt="Mini Games"
+              />
               <div class="card-body">
                 <h6 class="fw-bold mb-1">Mini Games</h6>
                 <div class="mb-1">
                   <span class="badge bg-secondary">Solo</span>
                 </div>
-                <p class="text-muted mb-0">Kleine experimenten met leuke mechanics.</p>
+                <p class="text-muted mb-0">
+                  Kleine experimenten met leuke mechanics.
+                </p>
               </div>
             </div>
           </aside>
 
           <!-- Main Content -->
           <div class="col-md-9 col-lg-10 px-4">
-         <!-- Project 1 -->
-<section id="project1" class="mb-5">
-  <div class="row align-items-center">
-    <div class="col-md-6 text-center">
-      <img src="assets/1.gif" class="img-fluid rounded shadow" alt="Project 1" />
-    </div>
-    <div class="col-md-6 mt-3 mt-md-0">
-      <h3 class="fw-bold">De Auto</h3>
-      <p class="text-muted small">Dit is de auto in de game die rijd die ook samen werkt met de wheel WheelCollider. </p>
-      <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code1', this)">Toon Code</button>
-      <pre id="code1" class="d-none"><code class="language-csharp">
+            <!-- Project 1 -->
+            <section id="project1" class="mb-5">
+              <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                  <img
+                    src="assets/1.gif"
+                    class="img-fluid rounded shadow"
+                    alt="Project 1"
+                  />
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <h3 class="fw-bold">De Auto</h3>
+                  <p class="text-muted small">
+                    Dit is de auto in de game die rijd die ook samen werkt met de
+                    wheel WheelCollider. 
+                    De gif die er staat laat zien hoe de auto rijd, en met de Instellingen van de wheel collider zo dat je ook echt een gevoel krijgt hoe een auto rijdt.
+                  </p>
+                  <p class="text-muted small">
+                    In de code laat ik zien hoe de wheel collider in zijn werk gaat.
+                  </p>
+                  <button
+                    class="btn btn-primary btn-sm toggle-btn"
+                    onclick="toggleCode('code1', this)"
+                  >
+                    Toon Code
+                  </button>
+                  <pre id="code1" class="d-none"><code class="language-csharp">
 public class CarSelection : MonoBehaviour
 {
     public GameObject[] cars;
@@ -286,22 +376,33 @@ public class CarSelection : MonoBehaviour
         }
     }
 }
-      </code></pre>
-    </div>
-  </div>
-</section>
-
+                  </code></pre>
+                </div>
+              </div>
+            </section>
 
             <!-- Project 2 -->
             <section id="project2" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center order-md-2">
-                  <img src="assets/2.gif" class="img-fluid rounded shadow" alt="Project 2" />
+                  <img
+                    src="assets/2.gif"
+                    class="img-fluid rounded shadow"
+                    alt="Project 2"
+                  />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0 order-md-1">
                   <h3 class="fw-bold">De wielen van de auto</h3>
-                  <p class="text-muted small">Dit zijn de wheel die op de wielen zitten zo dat je ook een mooi effect krijgt van ook echt rollende wielen.</p>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code2', this)">Toon Code</button>
+                  <p class="text-muted small">
+                    Dit zijn de wheel die op de wielen zitten zo dat je ook een
+                    mooi effect krijgt van ook echt rollende wielen.
+                  </p>
+                  <button
+                    class="btn btn-primary btn-sm toggle-btn"
+                    onclick="toggleCode('code2', this)"
+                  >
+                    Toon Code
+                  </button>
                   <pre id="code2" class="d-none"><code class="language-csharp">
 public class Wheel : MonoBehaviour
 {
@@ -352,12 +453,23 @@ public class Wheel : MonoBehaviour
             <section id="project3" class="mb-5">
               <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                  <img src="assets/3.gif" class="img-fluid rounded shadow" alt="Project 3" />
+                  <img
+                    src="assets/3.gif"
+                    class="img-fluid rounded shadow"
+                    alt="Project 3"
+                  />
                 </div>
                 <div class="col-md-6 mt-3 mt-md-0">
                   <h3 class="fw-bold">Het selecteren van de auto</h3>
-                  <p class="text-muted small">Dit is de selectie van de auto's die je uit de game kon kiezen.</p>
-                  <button class="btn btn-primary btn-sm toggle-btn" onclick="toggleCode('code3', this)">Toon Code</button>
+                  <p class="text-muted small">
+                    Dit is de selectie van de auto's die je uit de game kon kiezen.
+                  </p>
+                  <button
+                    class="btn btn-primary btn-sm toggle-btn"
+                    onclick="toggleCode('code3', this)"
+                  >
+                    Toon Code
+                  </button>
                   <pre id="code3" class="d-none"><code class="language-csharp">
 public class CarSelection : MonoBehaviour
 {
@@ -393,8 +505,6 @@ public class CarSelection : MonoBehaviour
             // Handle the case where the index is out of bounds
             Debug.LogError("Index out of bounds: " + index);
         }
-        
-
     }
 
     void Update()
@@ -437,7 +547,7 @@ public class CarSelection : MonoBehaviour
         PlayerPrefs.SetInt("carsIndex", index);
         PlayerPrefs.Save();
     }
-     
+
     public void Prev()
     {
         // Decrement the index
@@ -467,28 +577,10 @@ public class CarSelection : MonoBehaviour
         }
     }
 }
-
                   </code></pre>
                 </div>
               </div>
             </section>
-
-      <!-- About Me -->
-      <section class="bg-white py-5">
-        <div class="container px-5">
-          <div class="row gx-5 justify-content-center">
-            <div class="col-xxl-8">
-              <div class="text-center my-5">
-                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-                <p class="lead fw-light mb-4">My name is Sacha Scholten.</p>
-                <p class="text-muted">I’m passionate about creating beautiful things with code and visuals. Whether it's C# applications or photography, I love building and sharing ideas.</p>
-                <div class="d-flex justify-content-center fs-2 gap-4">
-                  <a class="text-gradient" href="#"><i class="bi bi-twitter"></i></a>
-                  <a class="text-gradient" href="#"><i class="bi bi-linkedin"></i></a>
-                  <a class="text-gradient" href="#"><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -497,8 +589,12 @@ public class CarSelection : MonoBehaviour
     <!-- Footer -->
     <footer class="bg-white py-4 mt-auto">
       <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto"><div class="small m-0">© Sacha Scholten 2025</div></div>
+        <div
+          class="row align-items-center justify-content-between flex-column flex-sm-row"
+        >
+          <div class="col-auto">
+            <div class="small m-0">© Sacha Scholten 2025</div>
+          </div>
           <div class="col-auto">
             <a class="small" href="#">Privacy</a>
             <span class="mx-1">·</span>
@@ -517,12 +613,12 @@ public class CarSelection : MonoBehaviour
     <script>
       function toggleCode(codeId, btn) {
         const codeBlock = document.getElementById(codeId);
-        if (codeBlock.classList.contains('d-none')) {
-          codeBlock.classList.remove('d-none');
-          btn.textContent = 'Verberg Code';
+        if (codeBlock.classList.contains("d-none")) {
+          codeBlock.classList.remove("d-none");
+          btn.textContent = "Verberg Code";
         } else {
-          codeBlock.classList.add('d-none');
-          btn.textContent = 'Toon Code';
+          codeBlock.classList.add("d-none");
+          btn.textContent = "Toon Code";
         }
       }
     </script>
